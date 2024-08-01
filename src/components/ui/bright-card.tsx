@@ -9,7 +9,17 @@ import {
 } from "./card";
 import { Button } from "./button";
 
-function BrightCard() {
+function BrightCard({
+  title,
+  description,
+  githubLink,
+  demoLink,
+}: {
+  title: string;
+  description: string;
+  githubLink?: string;
+  demoLink?: string;
+}) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -19,10 +29,8 @@ function BrightCard() {
     >
       <Card className="w-[350px] bright-card">
         <CardHeader>
-          <CardTitle>Create project</CardTitle>
-          <CardDescription>
-            Deploy your new project in one-click.
-          </CardDescription>
+          <CardTitle>{title}</CardTitle>
+          <CardDescription>{description}</CardDescription>
         </CardHeader>
         <CardContent>
           <form>
@@ -32,9 +40,18 @@ function BrightCard() {
             </div>
           </form>
         </CardContent>
-        <CardFooter className="flex justify-between">
+        <CardFooter>
           <span></span>
-          <Button>Deploy</Button>
+          {githubLink && (
+            <Button className="mr-2" onClick={() => window.open(githubLink, "_blank")}>
+              GitHub
+            </Button>
+          )}
+          {demoLink && (
+            <Button onClick={() => window.open(demoLink, "_blank")}>
+              Demo
+            </Button>
+          )}
         </CardFooter>
       </Card>
     </motion.div>
