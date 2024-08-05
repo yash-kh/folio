@@ -22,8 +22,8 @@ const ScrollLine: React.FC<ScrollLineProps> = ({ items, moveLeft, speed }) => {
       const motionDivWidth = motionDivRef.current?.scrollWidth || 0;
       await controls.start({
         x: moveLeft
-          ? [-motionDivWidth / 2 + 100, 0]
-          : [0, -motionDivWidth / 2 + 100],
+          ? [0, -motionDivWidth / 2 + 100]
+          : [-motionDivWidth / 2 + 100, 0],
         transition: {
           x: {
             repeat: Infinity,
@@ -36,13 +36,13 @@ const ScrollLine: React.FC<ScrollLineProps> = ({ items, moveLeft, speed }) => {
     };
 
     animate();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [controls]);
 
   return (
-    <div className="relative overflow-hidden whitespace-nowrap">
+    <div className="relative overflow-hidden whitespace-nowrap bg-black cursor-pointer">
       <motion.div
-        className="inline-flex items-center space-x-4 p-2"
+        className="inline-flex items-center"
         ref={motionDivRef}
         animate={controls}
       >
@@ -51,17 +51,8 @@ const ScrollLine: React.FC<ScrollLineProps> = ({ items, moveLeft, speed }) => {
           ...items,
           ...items,
           ...items,
-          ...items,
-          ...items,
-          ...items,
-          ...items,
-          ...items,
-          ...items,
-          ...items,
-          ...items,
-          ...items,
         ].map((item, index) => (
-          <React.Fragment key={index}>
+          <div key={index} className="flex items-center bright-card py-1 px-3 m-1">
             <svg
               role="img"
               viewBox="0 0 24 24"
@@ -73,7 +64,7 @@ const ScrollLine: React.FC<ScrollLineProps> = ({ items, moveLeft, speed }) => {
               <path d={item.IconComponent.path} />
             </svg>
             <span className="text-xl font-semibold">{item.text}</span>
-          </React.Fragment>
+          </div>
         ))}
       </motion.div>
     </div>
