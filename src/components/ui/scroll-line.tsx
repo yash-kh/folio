@@ -40,7 +40,7 @@ const ScrollLine: React.FC<ScrollLineProps> = ({ items, moveLeft, speed }) => {
   }, [controls]);
 
   return (
-    <div className="relative overflow-hidden whitespace-nowrap bg-black cursor-pointer">
+    <div className="relative overflow-hidden whitespace-nowrap bg-black cursor-default">
       <motion.div
         className="inline-flex items-center"
         ref={motionDivRef}
@@ -60,6 +60,7 @@ const ScrollLine: React.FC<ScrollLineProps> = ({ items, moveLeft, speed }) => {
               height="25"
               fill="currentColor"
               xmlns="http://www.w3.org/2000/svg"
+              className="mr-2"
             >
               <path d={item.IconComponent.path} />
             </svg>

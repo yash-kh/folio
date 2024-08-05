@@ -25,3 +25,40 @@
   box-shadow: 2px 2px 10px #a8b097, -2px -2px 10px #eaffd5;
   color: black;
 }
+
+.bright-icon:hover {
+  color: #c2d076;
+}
+
+.header-group {
+  border-radius: 30px;
+  --tw-backdrop-blur: blur(12px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness)
+    var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale)
+    var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert)
+    var(--tw-backdrop-opacity) var(--tw-backdrop-saturate)
+    var(--tw-backdrop-sepia);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness)
+    var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale)
+    var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert)
+    var(--tw-backdrop-opacity) var(--tw-backdrop-saturate)
+    var(--tw-backdrop-sepia);
+}
+
+.header-btn {
+  border-radius: 30px;
+}
+
+.header-btn.active {
+  background-color: #ffffff59;
+}
+
+.header-btn.active:hover {
+  background-color: #c2d076;
+}
+
+.me-img {
+  border-radius: 30px;
+  border: #c2d076 solid 2px;
+  padding: 1px;
+}
