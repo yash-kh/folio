@@ -13,6 +13,7 @@ function App() {
       <div className="App bg-folio-bg">
         <Header />
         <AboutMe />
+        <TechStack />
         <MagicMouse />
         {/* <BrightCard
           title="Omniegli"
@@ -20,7 +21,6 @@ function App() {
           demoLink="https://omnieglii.onrender.com"
           githubLink="https://github.com/yash-kh/Omniegli.git"
         /> */}
-        <TechStack />
       </div>
     </ThemeProvider>
   );

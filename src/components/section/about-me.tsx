@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { siCoffeescript, siGithub, siGmail, siX } from "simple-icons";
+import Tooltip from "../ui/tooltip";
 
 function AboutMe() {
   return (
@@ -11,10 +12,21 @@ function AboutMe() {
               <span className="text-gray-500 translate-x-[-10px] translate-y-[-30px]">
                 About Me
               </span>
-              <h1 className="text-5xl font-bold mb-8">Yash</h1>
-              <h3 className="mb-1">Problem Solver</h3>
-              <h3 className="mb-1">Code Base Explorer</h3>
-              <h3 className="mb-1">Open Source Contributor</h3>
+              <br />
+              <Tooltip message="HI! Thats me">
+                <h1 className="text-7xl font-bold mb-8">Yash</h1>
+              </Tooltip>
+              <h3 className="mb-1 text-lg">
+                Problem <Tooltip message="It's always Monday">Solver</Tooltip>
+              </h3>
+              <h3 className="mb-1 text-lg">
+                <Tooltip message="Sleep is optional">Code</Tooltip> Base
+                Explorer
+              </h3>
+              <h3 className="mb-1 text-lg">
+                Open Source{" "}
+                <Tooltip message="Debugging other’s mess">Contributor</Tooltip>
+              </h3>
               <div className="flex mt-5 header-group">
                 <button className="p-2 bright-icon">
                   <svg

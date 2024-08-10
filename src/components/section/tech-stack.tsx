@@ -33,6 +33,7 @@ import {
   siZod,
 } from "simple-icons/icons";
 import ScrollLine from "../ui/scroll-line";
+import Tooltip from "../ui/tooltip";
 
 interface TechStackProps {}
 
@@ -82,6 +83,13 @@ const TechStack: React.FC<TechStackProps> = () => {
 
   return (
     <>
+      <div className="text-center">
+        <div className="inline-block header-group py-5 px-10 m-10">
+          <Tooltip message="Want more! Just Ask">
+            <div className="text-5xl">Tech Stack</div>
+          </Tooltip>
+        </div>
+      </div>
       <ScrollLine items={frontend} moveLeft={true} speed={90} />
       <ScrollLine items={backend} moveLeft={false} speed={90} />
       <ScrollLine items={devops} moveLeft={true} speed={95} />

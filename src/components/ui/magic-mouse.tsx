@@ -48,6 +48,7 @@ function MagicMouse() {
       style={{
         top: position.y,
         left: position.x,
+        position: "fixed"
       }}
     />
   );

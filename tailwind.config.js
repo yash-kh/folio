@@ -51,7 +51,7 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        'folio-bg': '#202030'
+        'folio-bg': '#021526'
       },
       borderRadius: {
         lg: "var(--radius)",
