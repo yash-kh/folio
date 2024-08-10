@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import {
   Card,
   CardContent,
-  CardDescription,
+  // CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
@@ -22,28 +22,30 @@ function BrightCard({
 }) {
   return (
     <motion.div
+      className="flex justify-center"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <Card className="w-[350px] bright-card">
+      <Card className="w-[450px] bright-card">
         <CardHeader>
           <CardTitle>{title}</CardTitle>
-          <CardDescription>{description}</CardDescription>
+          {/* <CardDescription>{description}</CardDescription> */}
         </CardHeader>
         <CardContent>
-          <form>
-            <div className="grid w-full items-center gap-4">
-              <div className="flex flex-col space-y-1.5"></div>
-              <div className="flex flex-col space-y-1.5"></div>
-            </div>
-          </form>
+          <div className="grid w-full items-center gap-4">
+            <div className="flex flex-col space-y-1.5">{description}</div>
+            <div className="flex flex-col space-y-1.5"></div>
+          </div>
         </CardContent>
         <CardFooter>
           <span></span>
           {githubLink && (
-            <Button className="mr-2" onClick={() => window.open(githubLink, "_blank")}>
+            <Button
+              className="mr-2"
+              onClick={() => window.open(githubLink, "_blank")}
+            >
               GitHub
             </Button>
           )}

@@ -28,58 +28,66 @@ function AboutMe() {
                 <Tooltip message="Debugging other’s mess">Contributor</Tooltip>
               </h3>
               <div className="flex mt-5 header-group">
-                <button className="p-2 bright-icon">
-                  <svg
-                    role="img"
-                    viewBox="0 0 24 24"
-                    width="25"
-                    height="25"
-                    fill="currentColor"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="mr-2"
-                  >
-                    <path d={siGithub.path} />
-                  </svg>
-                </button>
-                <button className="p-2 bright-icon">
-                  <svg
-                    role="img"
-                    viewBox="0 0 24 24"
-                    width="25"
-                    height="25"
-                    fill="currentColor"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="mr-2"
-                  >
-                    <path d={siGmail.path} />
-                  </svg>
-                </button>
-                <button className="p-2 bright-icon">
-                  <svg
-                    role="img"
-                    viewBox="0 0 24 24"
-                    width="25"
-                    height="25"
-                    fill="currentColor"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="mr-2"
-                  >
-                    <path d={siCoffeescript.path} />
-                  </svg>
-                </button>
-                <button className="p-2 bright-icon">
-                  <svg
-                    role="img"
-                    viewBox="0 0 24 24"
-                    width="25"
-                    height="25"
-                    fill="currentColor"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="mr-2"
-                  >
-                    <path d={siX.path} />
-                  </svg>
-                </button>
+                <Tooltip message="Github">
+                  <button className="p-2 bright-icon">
+                    <svg
+                      role="img"
+                      viewBox="0 0 24 24"
+                      width="25"
+                      height="25"
+                      fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="mr-2"
+                    >
+                      <path d={siGithub.path} />
+                    </svg>
+                  </button>
+                </Tooltip>
+                <Tooltip message="Mail">
+                  <button className="p-2 bright-icon">
+                    <svg
+                      role="img"
+                      viewBox="0 0 24 24"
+                      width="25"
+                      height="25"
+                      fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="mr-2"
+                    >
+                      <path d={siGmail.path} />
+                    </svg>
+                  </button>
+                </Tooltip>
+                <Tooltip message="Lets Talk!">
+                  <button className="p-2 bright-icon">
+                    <svg
+                      role="img"
+                      viewBox="0 0 24 24"
+                      width="25"
+                      height="25"
+                      fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="mr-2"
+                    >
+                      <path d={siCoffeescript.path} />
+                    </svg>
+                  </button>
+                </Tooltip>
+                <Tooltip message="Twitter || X">
+                  <button className="p-2 bright-icon">
+                    <svg
+                      role="img"
+                      viewBox="0 0 24 24"
+                      width="25"
+                      height="25"
+                      fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="mr-2"
+                    >
+                      <path d={siX.path} />
+                    </svg>
+                  </button>
+                </Tooltip>
               </div>
             </div>
           </div>
@@ -94,6 +102,21 @@ function AboutMe() {
               src="yash.jpg"
               alt="Group-1"
             />
+          </div>
+        </div>
+        {/* Description Section */}
+        <div className="flex justify-center">
+          <div className="description-section text-center mt-10 header-group p-3 w-fit">
+            <h2 className="text-2xl font-semibold mb-4">Who am I?</h2>
+            <p className="max-w-3xl mx-auto">
+              I am Yash, a passionate{" "}
+              <Tooltip message="Since 2021">developer</Tooltip> with a love for
+              problem-solving and exploring new technologies. Whether it's
+              delving into a complex{" "}
+              <Tooltip message="Playground">codebase</Tooltip> or contributing
+              to open-source projects, I thrive on challenges that push me to
+              grow and <Tooltip message="& Earn">learn</Tooltip>.
+            </p>
           </div>
         </div>
       </div>
