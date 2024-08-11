@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
-import { siCoffeescript, siGithub, siGmail, siX } from "simple-icons";
+import { siGithub, siGmail, siLinkedin, siX } from "simple-icons";
 import Tooltip from "../ui/tooltip";
 
 function AboutMe() {
   return (
     <>
-      <div className="container py-4">
+      <div className="container py-4" id="about-me">
         <div className="flex flex-wrap justify-around w-full">
           <div className="flex justify-center mb-5">
             <div>
@@ -29,7 +29,12 @@ function AboutMe() {
               </h3>
               <div className="flex mt-5 header-group">
                 <Tooltip message="Github">
-                  <button className="p-2 bright-icon">
+                  <button
+                    className="p-2 bright-icon"
+                    onClick={() => {
+                      window.open("https://github.com/yash-kh");
+                    }}
+                  >
                     <svg
                       role="img"
                       viewBox="0 0 24 24"
@@ -43,8 +48,11 @@ function AboutMe() {
                     </svg>
                   </button>
                 </Tooltip>
-                <Tooltip message="Mail">
-                  <button className="p-2 bright-icon">
+                <Tooltip message="Lets Talk!">
+                  <button
+                    className="p-2 bright-icon"
+                    onClick={() => window.open("mailto:hello@yashkhatri.in")}
+                  >
                     <svg
                       role="img"
                       viewBox="0 0 24 24"
@@ -58,8 +66,15 @@ function AboutMe() {
                     </svg>
                   </button>
                 </Tooltip>
-                <Tooltip message="Lets Talk!">
-                  <button className="p-2 bright-icon">
+                <Tooltip message="Linkedin">
+                  <button
+                    className="p-2 bright-icon"
+                    onClick={() => {
+                      window.open(
+                        "https://www.linkedin.com/in/yash-khatri-35850018b/"
+                      );
+                    }}
+                  >
                     <svg
                       role="img"
                       viewBox="0 0 24 24"
@@ -69,12 +84,17 @@ function AboutMe() {
                       xmlns="http://www.w3.org/2000/svg"
                       className="mr-2"
                     >
-                      <path d={siCoffeescript.path} />
+                      <path d={siLinkedin.path} />
                     </svg>
                   </button>
                 </Tooltip>
                 <Tooltip message="Twitter || X">
-                  <button className="p-2 bright-icon">
+                  <button
+                    className="p-2 bright-icon"
+                    onClick={() => {
+                      window.open("https://x.com/_Yash_Khatri");
+                    }}
+                  >
                     <svg
                       role="img"
                       viewBox="0 0 24 24"

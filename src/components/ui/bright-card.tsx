@@ -28,7 +28,7 @@ function BrightCard({
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <Card className="w-[450px] bright-card">
+      <Card className="max-w-[450px] bright-card">
         <CardHeader>
           <CardTitle>{title}</CardTitle>
           {/* <CardDescription>{description}</CardDescription> */}
@@ -46,12 +46,12 @@ function BrightCard({
               className="mr-2"
               onClick={() => window.open(githubLink, "_blank")}
             >
-              GitHub
+              <i className="fa-brands fa-github"></i>
             </Button>
           )}
           {demoLink && (
             <Button onClick={() => window.open(demoLink, "_blank")}>
-              Demo
+              <i className="fa-solid fa-link"></i>
             </Button>
           )}
         </CardFooter>

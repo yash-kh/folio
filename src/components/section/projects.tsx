@@ -4,7 +4,7 @@ import Tooltip from "../ui/tooltip";
 function Projects() {
   return (
     <>
-      <div className="container py-4">
+      <div className="container py-4" id="projects">
         <div className="text-center">
           <div className="inline-block header-group py-5 px-10 m-10">
             <Tooltip message="More on the Way!">

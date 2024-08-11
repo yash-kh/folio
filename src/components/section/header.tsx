@@ -10,24 +10,27 @@ function Header() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <motion.button
+          <motion.a
             whileHover={{ scale: 1.1 }}
             className="py-3 px-5 header-btn bright-card active m-2"
+            href="#about-me"
           >
             Start
-          </motion.button>
-          <motion.button
+          </motion.a>
+          <motion.a
             whileHover={{ scale: 1.1 }}
             className="py-3 px-5 header-btn bright-card m-2"
+            href="#work"
           >
             Work
-          </motion.button>
-          <motion.button
+          </motion.a>
+          <motion.a
             whileHover={{ scale: 1.1 }}
             className="py-3 px-5 header-btn bright-card m-2"
+            href="#projects"
           >
             Projects
-          </motion.button>
+          </motion.a>
         </motion.div>
       </div>
     </header>
