@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 function Header() {
   return (
-    <header className="flex justify-center items-center">
+    <header className="flex justify-center items-center my-2">
       <div className="min-w-96">
         <motion.div
           className="header-group backdrop-blur-md flex justify-around items-center h-20 relative"

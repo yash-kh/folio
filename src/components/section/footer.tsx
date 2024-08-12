@@ -1,15 +1,9 @@
-import { motion } from "framer-motion";
 import { siGithub, siGmail, siLinkedin, siX } from "simple-icons";
 import Tooltip from "../ui/tooltip";
 
 function Footer() {
   return (
-    <motion.footer
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      className="bg-black text-slate-300 py-12"
-    >
+    <footer className="bg-black text-slate-300 py-12 mt-10">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="flex flex-col items-center space-y-6">
           <p className="text-center text-lg font-semibold">
@@ -100,7 +94,7 @@ function Footer() {
           </div>
         </div>
       </div>
-    </motion.footer>
+    </footer>
   );
 }
 
