@@ -5,6 +5,7 @@ import TechStack from "./components/section/tech-stack";
 import Header from "./components/section/header";
 import AboutMe from "./components/section/about-me";
 import Projects from "./components/section/projects";
+import Footer from "./components/section/footer";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <TechStack />
         <MagicMouse />
         <Projects />
+        <Footer />
       </div>
     </ThemeProvider>
   );

@@ -5,7 +5,7 @@ import Tooltip from "../ui/tooltip";
 function AboutMe() {
   return (
     <>
-      <div className="container py-4" id="about-me">
+      <div className="container py-8" id="about-me">
         <div className="flex flex-wrap justify-around w-full">
           <div className="flex justify-center mb-5">
             <div>
@@ -16,18 +16,18 @@ function AboutMe() {
               <Tooltip message="HI! Thats me">
                 <h1 className="text-7xl font-bold mb-8">Yash</h1>
               </Tooltip>
-              <h3 className="mb-1 text-lg">
+              <h3 className="mb-1 text-2xl">
                 Problem <Tooltip message="It's always Monday">Solver</Tooltip>
               </h3>
-              <h3 className="mb-1 text-lg">
+              <h3 className="mb-1 text-2xl">
                 <Tooltip message="Sleep is optional">Code</Tooltip> Base
                 Explorer
               </h3>
-              <h3 className="mb-1 text-lg">
+              <h3 className="mb-1 text-2xl">
                 Open Source{" "}
                 <Tooltip message="Debugging other’s mess">Contributor</Tooltip>
               </h3>
-              <div className="flex mt-5 header-group">
+              <div className="flex mt-5 header-group w-fit">
                 <Tooltip message="Github">
                   <button
                     className="p-2 bright-icon"
@@ -38,8 +38,8 @@ function AboutMe() {
                     <svg
                       role="img"
                       viewBox="0 0 24 24"
-                      width="25"
-                      height="25"
+                      width="30"
+                      height="30"
                       fill="currentColor"
                       xmlns="http://www.w3.org/2000/svg"
                       className="mr-2"
@@ -56,8 +56,8 @@ function AboutMe() {
                     <svg
                       role="img"
                       viewBox="0 0 24 24"
-                      width="25"
-                      height="25"
+                      width="30"
+                      height="30"
                       fill="currentColor"
                       xmlns="http://www.w3.org/2000/svg"
                       className="mr-2"
@@ -78,8 +78,8 @@ function AboutMe() {
                     <svg
                       role="img"
                       viewBox="0 0 24 24"
-                      width="25"
-                      height="25"
+                      width="30"
+                      height="30"
                       fill="currentColor"
                       xmlns="http://www.w3.org/2000/svg"
                       className="mr-2"
@@ -98,8 +98,8 @@ function AboutMe() {
                     <svg
                       role="img"
                       viewBox="0 0 24 24"
-                      width="25"
-                      height="25"
+                      width="30"
+                      height="30"
                       fill="currentColor"
                       xmlns="http://www.w3.org/2000/svg"
                       className="mr-2"
@@ -127,8 +127,8 @@ function AboutMe() {
         {/* Description Section */}
         <div className="flex justify-center">
           <div className="description-section text-center mt-10 header-group p-3 w-fit">
-            <h2 className="text-2xl font-semibold mb-4">Who am I?</h2>
-            <p className="max-w-3xl mx-auto">
+            <h2 className="text-4xl font-semibold mb-10">Who am I?</h2>
+            <p className="max-w-3xl text-2xl mx-auto">
               I am Yash, a passionate{" "}
               <Tooltip message="Since 2021">developer</Tooltip> with a love for
               problem-solving and exploring new technologies. Whether it's

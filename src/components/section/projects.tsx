@@ -35,7 +35,7 @@ function Projects() {
             <BrightCard
               title="Portfolio"
               description="A portfolio website made to showcase my development skills and projects."
-              // demoLink="https://github.com/yash-kh/folio"
+              demoLink="https://yashkhatri.in"
               githubLink="https://github.com/yash-kh/folio"
             />
           </div>
