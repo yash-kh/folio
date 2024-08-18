@@ -1,8 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { SimpleIcon } from "simple-icons";
+import ScrollLinePill from "./scroll-line-pill";
 
-interface ScrollLineItem {
+export interface ScrollLineItem {
   text: string;
   IconComponent: SimpleIcon;
 }
@@ -46,26 +47,8 @@ const ScrollLine: React.FC<ScrollLineProps> = ({ items, moveLeft, speed }) => {
         ref={motionDivRef}
         animate={controls}
       >
-        {[
-          ...items,
-          ...items,
-          ...items,
-          ...items,
-        ].map((item, index) => (
-          <div key={index} className="flex items-center bright-card py-1 px-3 m-1">
-            <svg
-              role="img"
-              viewBox="0 0 24 24"
-              width="25"
-              height="25"
-              fill="currentColor"
-              xmlns="http://www.w3.org/2000/svg"
-              className="mr-2"
-            >
-              <path d={item.IconComponent.path} />
-            </svg>
-            <span className="text-xl font-semibold">{item.text}</span>
-          </div>
+        {[...items, ...items, ...items, ...items].map((item, index) => (
+          <ScrollLinePill key={index} item={item} />
         ))}
       </motion.div>
     </div>

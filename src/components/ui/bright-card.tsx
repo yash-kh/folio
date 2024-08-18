@@ -1,12 +1,6 @@
-import { motion } from "framer-motion";
-import {
-  Card,
-  CardContent,
-  // CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "./card";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "./card";
 import { Button } from "./button";
 
 function BrightCard({
@@ -20,18 +14,20 @@ function BrightCard({
   githubLink?: string;
   demoLink?: string;
 }) {
+  const ref = useRef(null);
+  const inView = useInView(ref);
+
   return (
     <motion.div
       className="flex justify-center"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.5 }}
+      ref={ref}
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={inView ? { opacity: 1, scale: [0.8, 1] } : { opacity: 0 }}
+      transition={{ duration: 0.4, ease: "easeInOut" }}
     >
       <Card className="max-w-[450px] bright-card">
         <CardHeader>
           <CardTitle>{title}</CardTitle>
-          {/* <CardDescription>{description}</CardDescription> */}
         </CardHeader>
         <CardContent>
           <div className="grid w-full items-center gap-4">
