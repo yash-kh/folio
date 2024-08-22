@@ -15,6 +15,12 @@ function Projects() {
         <div className="flex justify-center">
           <div className="grid max-w-[950px] md:grid-cols-2 gap-4 w-full">
             <BrightCard
+              title="yashletz"
+              description="(Work in progress) A Web based wallet, for storing and exchanging crypto assets. Made with next.js using alchemy API."
+              demoLink="https://yashletz.vercel.app"
+              githubLink="https://github.com/yash-kh/yashletz"
+            />
+            <BrightCard
               title="Omniegli"
               description="An Omegle clone featuring real-time chat and video functionality using Socket.io and WebRTC for peer-to-peer communication."
               demoLink="https://omnieglii.onrender.com"
