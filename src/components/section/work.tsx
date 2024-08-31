@@ -4,7 +4,13 @@ import Tooltip from "../ui/tooltip";
 function Work() {
   return (
     <>
-      <div className="container py-4" id="work">
+      <div className="container relative pt-4 pb-40" id="work">
+      <div className="absolute top-0 left-0 text-9xl text-[#5BBCFF] opacity-40 z-[-1]">
+            {"{"}
+        </div>
+        <div className="absolute bottom-0 right-0 text-9xl text-[#5BBCFF] opacity-40 z-[-1]">
+            {"}"}
+        </div>
         <div className="text-center">
           <div className="inline-block header-group py-5 px-10 m-10">
             <Tooltip message="Make it work!">

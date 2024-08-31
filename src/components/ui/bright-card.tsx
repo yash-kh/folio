@@ -6,11 +6,13 @@ import { Button } from "./button";
 function BrightCard({
   title,
   description,
+  techStack,
   githubLink,
   demoLink,
 }: {
   title: string;
   description: string;
+  techStack?: string;
   githubLink?: string;
   demoLink?: string;
 }) {
@@ -31,8 +33,14 @@ function BrightCard({
         </CardHeader>
         <CardContent>
           <div className="grid w-full items-center gap-4">
-            <div className="flex flex-col space-y-1.5">{description}</div>
-            <div className="flex flex-col space-y-1.5"></div>
+            <div className="flex flex-col space-y-1.5">
+              {description}
+              {techStack && (
+                <span className="mt-3 text-sm">
+                  {"TechStack: " + techStack}
+                </span>
+              )}
+            </div>
           </div>
         </CardContent>
         <CardFooter>

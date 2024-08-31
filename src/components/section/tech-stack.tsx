@@ -82,7 +82,7 @@ const TechStack: React.FC<TechStackProps> = () => {
   ];
 
   return (
-    <>
+    <div className="mb-20">
       <div className="text-center">
         <div className="inline-block header-group py-5 px-10 m-10">
           <Tooltip message="Want more! Just Ask">
@@ -94,7 +94,7 @@ const TechStack: React.FC<TechStackProps> = () => {
       <ScrollLine items={backend} moveLeft={false} speed={90} />
       <ScrollLine items={devops} moveLeft={true} speed={95} />
       <ScrollLine items={tools} moveLeft={false} speed={90} />
-    </>
+    </div>
   );
 };
 
