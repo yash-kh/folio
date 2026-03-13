@@ -14,8 +14,9 @@ function AboutMe() {
               </span>
               <br />
               <Tooltip message="HI! Thats me">
-                <h1 className="text-7xl font-bold mb-8">Yash</h1>
+                <h1 className="text-7xl font-bold mb-2">Yash</h1>
               </Tooltip>
+              <h2 className="text-3xl font-semibold mb-6" style={{ color: 'var(--folio-secondary)' }}>Full Stack Developer</h2>
               <h3 className="mb-1 text-2xl">
                 Problem <Tooltip message="It's always Monday">Solver</Tooltip>
               </h3>
@@ -25,7 +26,7 @@ function AboutMe() {
               </h3>
               <h3 className="mb-1 text-2xl">
                 Open Source{" "}
-                <Tooltip message="Debugging other’s mess">Contributor</Tooltip>
+                <Tooltip message="Debugging other's mess">Contributor</Tooltip>
               </h3>
               <div className="flex mt-5 header-group w-fit">
                 <motion.span
@@ -153,7 +154,7 @@ function AboutMe() {
         </div>
         {/* Description Section */}
         <div className="flex justify-center">
-          <div className="description-section text-center mt-10 header-group p-3 w-fit">
+          <div className="description-section text-center mt-4 header-group p-3 w-fit">
             <h2 className="text-4xl font-semibold mb-10">Who am I?</h2>
             <p className="max-w-3xl text-2xl mx-auto">
               I am Yash, a passionate{" "}

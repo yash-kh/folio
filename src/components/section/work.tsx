@@ -5,10 +5,10 @@ function Work() {
   return (
     <>
       <div className="container relative pt-4 pb-40" id="work">
-      <div className="absolute top-0 left-0 text-9xl text-[#5BBCFF] opacity-40 z-[-1]">
+      <div className="absolute top-0 left-0 text-9xl opacity-40 z-[-1]" style={{ color: 'var(--folio-secondary)' }}>
             {"{"}
         </div>
-        <div className="absolute bottom-0 right-0 text-9xl text-[#5BBCFF] opacity-40 z-[-1]">
+        <div className="absolute bottom-0 right-0 text-9xl opacity-40 z-[-1]" style={{ color: 'var(--folio-secondary)' }}>
             {"}"}
         </div>
         <div className="text-center">
@@ -19,7 +19,9 @@ function Work() {
           </div>
         </div>
         <div className="flex justify-center">
-          <div className="grid max-w-[950px] md:grid-cols-1 gap-8 w-full">
+          <div className="relative grid max-w-[950px] md:grid-cols-1 gap-8 w-full pl-8 md:pl-12">
+            {/* Timeline line */}
+            <div className="absolute left-3 md:left-6 top-0 bottom-0 w-0.5" style={{ backgroundColor: 'rgba(var(--folio-secondary-rgb), 0.3)' }} />
             <LongBrightCard
               title="SDE - 1"
               company="Cyno pharmaceutical"
@@ -38,10 +40,10 @@ function Work() {
               company="Affordplan"
               timeSlot="03/2022 - 06/2023"
               description={[
-                "Responsible for developing User Interaction screens.",
-                "Migration of Angular JS application to Angular 10+ application.",
-                "Making efficient Cron job for better analysis of system health.",
-                "Assigning task to interns, taking regular updates and code review.",
+                "Developed User Interaction screens.",
+                "Migrated Angular JS application to Angular 10+ application.",
+                "Made efficient Cron jobs for better analysis of system health.",
+                "Assigned tasks to interns, took regular updates and performed code reviews.",
               ]}
               demoLink="https://affordplan.com/"
               //   githubLink="https://github.com/yash-kh/bridge"
@@ -51,9 +53,9 @@ function Work() {
               company="Accenture"
               timeSlot="09/2021 - 03/2022"
               description={[
-                "Started learning .Net Development.",
-                "Interacting with the clients in order to understand their issues.",
-                "Main focus was the smooth functioning of the interfaces.",
+                "Learned .Net Development.",
+                "Interacted with clients to understand their issues.",
+                "Ensured the smooth functioning of the interfaces.",
               ]}
               demoLink="https://Accenture.com"
               //   githubLink="https://github.com/yash-kh/ImageAnnotationApp"
@@ -63,9 +65,9 @@ function Work() {
               company="CJ darcl logistics"
               timeSlot="01/2021 - 05/2021"
               description={[
-                "Started learning about frontend development with Angular",
-                "Worked on microservices on express.js",
-                "Working on database both SQL and NoSQL",
+                "Learned frontend development with Angular",
+                "Worked on microservices on Express.js",
+                "Worked on databases including both SQL and NoSQL",
               ]}
               demoLink="https://cjdarcl.com/"
               //   githubLink="https://github.com/yash-kh/folio"

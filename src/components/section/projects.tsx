@@ -5,10 +5,10 @@ function Projects() {
   return (
     <>
       <div className="container pt-4 relative pb-40" id="projects">
-        <div className="absolute top-0 left-0 text-9xl text-[#5BBCFF] opacity-40 z-[-1]">
+        <div className="absolute top-0 left-0 text-9xl opacity-40 z-[-1]" style={{ color: 'var(--folio-secondary)' }}>
             {"<>"}
         </div>
-        <div className="absolute bottom-0 right-0 text-9xl text-[#5BBCFF] opacity-40 z-[-1]">
+        <div className="absolute bottom-0 right-0 text-9xl opacity-40 z-[-1]" style={{ color: 'var(--folio-secondary)' }}>
             {"</>"}
         </div>
         <div className="text-center">

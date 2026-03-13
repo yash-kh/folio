@@ -4,7 +4,16 @@
 
   @layer base {
     :root {
-      background-color: #021526;
+      --folio-accent: #FFDD00;
+      --folio-accent-rgb: 255, 221, 0;
+      --folio-secondary: #5BBCFF;
+      --folio-secondary-rgb: 91, 188, 255;
+      --folio-bg: #021526;
+      --folio-bg-rgb: 2, 21, 38;
+      --folio-bg-light: #0a1628;
+      --folio-bg-light-rgb: 10, 22, 40;
+
+      background-color: var(--folio-bg);
       --background: 0 0% 100%;
       --foreground: 222.2 84% 4.9%;
 

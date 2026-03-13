@@ -19,6 +19,14 @@ function BrightCard({
   const ref = useRef(null);
   const inView = useInView(ref);
 
+  const techBadges = techStack
+    ? techStack
+        .replace(/\.$/, "")
+        .split(",")
+        .map((t) => t.trim())
+        .filter(Boolean)
+    : [];
+
   return (
     <motion.div
       className="flex justify-center"
@@ -35,27 +43,49 @@ function BrightCard({
           <div className="grid w-full items-center gap-4">
             <div className="flex flex-col space-y-1.5">
               {description}
-              {techStack && (
-                <span className="mt-3 text-sm">
-                  {"TechStack: " + techStack}
-                </span>
+              {techBadges.length > 0 && (
+                <div className="flex flex-wrap gap-2 mt-3">
+                  {techBadges.map((tech, index) => (
+                    <span
+                      key={index}
+                      className="inline-block text-xs font-medium px-2.5 py-1 rounded-full border"
+                      style={{
+                        backgroundColor: 'rgba(var(--folio-secondary-rgb), 0.15)',
+                        color: 'var(--folio-secondary)',
+                        borderColor: 'rgba(var(--folio-secondary-rgb), 0.25)',
+                      }}
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               )}
             </div>
           </div>
         </CardContent>
         <CardFooter>
-          <span></span>
           {githubLink && (
-            <Button
-              className="mr-2"
-              onClick={() => window.open(githubLink, "_blank")}
-            >
-              <i className="fa-brands fa-github"></i>
+            <Button className="mr-2" asChild>
+              <a
+                href={githubLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`View ${title} source code on GitHub`}
+              >
+                <i className="fa-brands fa-github"></i>
+              </a>
             </Button>
           )}
           {demoLink && (
-            <Button onClick={() => window.open(demoLink, "_blank")}>
-              <i className="fa-solid fa-link"></i>
+            <Button asChild>
+              <a
+                href={demoLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`View ${title} live demo`}
+              >
+                <i className="fa-solid fa-link"></i>
+              </a>
             </Button>
           )}
         </CardFooter>

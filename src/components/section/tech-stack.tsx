@@ -1,4 +1,3 @@
-import React from "react";
 import {
   siAmazonec2,
   siAmazons3,
@@ -30,17 +29,17 @@ import {
   siSlack,
   siSocketdotio,
   siTailwindcss,
+  siTypescript,
   siZod,
 } from "simple-icons/icons";
 import ScrollLine from "../ui/scroll-line";
 import Tooltip from "../ui/tooltip";
 
-interface TechStackProps {}
-
-const TechStack: React.FC<TechStackProps> = () => {
+function TechStack() {
   const frontend = [
     { text: "React", IconComponent: siReact },
     { text: "JavaScript", IconComponent: siJavascript },
+    { text: "TypeScript", IconComponent: siTypescript },
     { text: "Next", IconComponent: siNextdotjs },
     { text: "Angular", IconComponent: siAngular },
     { text: "Redux", IconComponent: siRedux },
@@ -96,6 +95,6 @@ const TechStack: React.FC<TechStackProps> = () => {
       <ScrollLine items={tools} moveLeft={false} speed={90} />
     </div>
   );
-};
+}
 
 export default TechStack;

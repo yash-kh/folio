@@ -23,12 +23,14 @@ function LongBrightCard({
 
   return (
     <motion.div
-      className="flex justify-center items-center"
+      className="relative flex justify-center items-center"
       ref={ref}
       initial={{ opacity: 0, scale: 0.8 }}
       animate={inView ? { opacity: 1, scale: [0.8, 1] } : { opacity: 0 }}
       transition={{ duration: 0.4, ease: "easeInOut" }}
     >
+      {/* Timeline dot */}
+      <div className="absolute -left-8 md:-left-12 top-6 w-3 h-3 rounded-full border-2 z-10" style={{ backgroundColor: 'var(--folio-secondary)', borderColor: 'rgba(var(--folio-secondary-rgb), 0.5)' }} />
       <Card className="w-full max-w-[900px] p-2 bright-card">
         <CardHeader>
           <CardTitle>
@@ -45,16 +47,27 @@ function LongBrightCard({
         </CardContent>
         <CardFooter className="flex justify-end">
           {githubLink && (
-            <Button
-              className="mr-2"
-              onClick={() => window.open(githubLink, "_blank")}
-            >
-              <i className="fa-brands fa-github"></i>
+            <Button className="mr-2" asChild>
+              <a
+                href={githubLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`View ${title} source code on GitHub`}
+              >
+                <i className="fa-brands fa-github"></i>
+              </a>
             </Button>
           )}
           {demoLink && (
-            <Button onClick={() => window.open(demoLink, "_blank")}>
-              <i className="fa-solid fa-link"></i>
+            <Button asChild>
+              <a
+                href={demoLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`View ${title} live demo`}
+              >
+                <i className="fa-solid fa-link"></i>
+              </a>
             </Button>
           )}
         </CardFooter>
