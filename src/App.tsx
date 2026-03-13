@@ -10,11 +10,7 @@ import Projects from "./components/section/projects";
 import Footer from "./components/section/footer";
 import StackMatch from "./components/section/stack-match";
 import Work from "./components/section/work";
-import Contact from "./components/section/contact";
-import { usePageView } from "./hooks/usePageView";
-
 function App() {
-  usePageView();
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <ColorThemeProvider>
